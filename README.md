@@ -1,1 +1,2 @@
 # Banking_Mangment_System
+#Developed a comprehensive banking management system using Java and JDBC to manage core banking functionalities. The system allows account creation and management, processing of deposits, withdrawals, and transfers, along with customer details and activity tracking. Utilizing JDBC, the system connects securely to a MySQL database for efficient data storage and retrieval. The user-friendly interface (optional: specify type) streamlines banking operations for both customers and administrators.
