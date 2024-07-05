@@ -1,29 +1,57 @@
+🏦 Banking Management System 💳
 
-🛒 Supermarket Billing System 🛍️
+The Banking Management System is an intermediate Java backend project that uses JDBC and MySQL to handle various banking operations such as account management, transactions, and balance inquiries. Here’s a brief description of its core components and functionalities:
+Core Components:
 
-The supermarket billing system in Java is designed to manage the billing process efficiently. Here's an overview of its core components and functionalities:
-
-    Product Class 📦:
-        Attributes: Contains product ID, name, price, and quantity.
+    Account Class 💼:
+        Attributes: Account number, account holder name, balance, and account type.
         Methods:
-            getProductDetails(): Retrieves product information.
-            updateQuantity(): Updates the quantity of a product.
+            createAccount(): Creates a new account.
+            deposit(): Deposits money into the account.
+            withdraw(): Withdraws money from the account.
+            getBalance(): Retrieves the current balance.
 
-    Cart Class 🛒:
-        Attributes: A list to store products added to the cart.
-        Methods:
-            addProduct(Product product): Adds a product to the cart.
-            removeProduct(Product product): Removes a product from the cart.
-            calculateTotal(): Calculates the total price of the items in the cart.
+    Database Connection 🔗:
+        Purpose: Manages the connection to the MySQL database using JDBC.
+        Implementation: Establishes and closes the connection to the database.
 
-    Billing Class 💰:
-        Attributes: Cart object and total amount.
+    AccountDAO Class 💾:
+        Attributes: Database connection.
         Methods:
-            generateBill(): Generates the final bill showing product details and total amount.
-            printBill(): Prints the bill.
+            addAccount(Account account): Adds a new account to the database.
+            updateAccount(Account account): Updates account details in the database.
+            deleteAccount(int accountNumber): Deletes an account from the database.
+            getAccount(int accountNumber): Retrieves account details from the database.
+
+    Transaction Class 💸:
+        Attributes: Transaction ID, account number, transaction type, amount, date.
+        Methods:
+            recordTransaction(): Records a transaction in the database.
 
     Main Class 🚀:
         Methods:
-            main(String[] args): The entry point of the application. It initializes products, adds them to the cart, and generates the bill.
+            main(String[] args): The entry point of the application. It handles user interactions and invokes methods for various operations.
 
 
+Workflow :
+
+    Establish Database Connection:
+        The DatabaseConnection class connects to the MySQL database using JDBC.
+
+    Create and Add Account:
+        The AccountDAO class uses SQL statements to add new accounts to the database.
+
+    Retrieve Account Details:
+        The AccountDAO class fetches account details from the database using SQL queries.
+
+    Update and Delete Accounts:
+        The AccountDAO class provides methods to update and delete accounts using SQL operations.
+
+Key Features:
+
+    Data Persistence: Utilizes MySQL to store and manage data.
+    Database Operations: Handles CRUD operations using JDBC.
+    Account Management: Manages account creation, updating, and deletion.
+    Transaction Management: Records and manages transactions for accounts.
+
+This system effectively manages banking operations using intermediate Java skills with JDBC for database interactions, providing a solid backend solution for banking management. 🏦🚀
